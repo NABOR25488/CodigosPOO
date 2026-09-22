@@ -29,5 +29,5 @@ from cliente import Cliente
 #novoPedido.imprimir()#
 
 novoCliente = Cliente(endereco="rua vital brasil", nome="sla", cpf="38483", email= "jefjefnje@gmail.com",  tel="93489589" )
-novoCliente.imprimirficha()
+novoCliente.imprimirficha() 
 
