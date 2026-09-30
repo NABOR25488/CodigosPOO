@@ -20,12 +20,15 @@ class Pedido:
         print(f"\n------------- Pedido nº {self.__num} --------------"
               f"\nData: {self.data} -  Horário: {self.hora} "
               f"\nCliente: {self.cliente.nome}"
-              f"\nEndereco: {self.cliente.endereco}"
+              f"\nEndereço: {self.cliente.endereco}"
               f"\nTelefone: {self.cliente.getTelefone()}"
-              f"\nItens do Pedido: {self.__itens}"
               f"\nStatus: {self.status} -  Pagamento: {self.pagamento}"
-              f"\n----------------------------------------------"
-              )
+              f"\n----------------------------------------------")
+        for item in self.__itens:
+            print(f"Produto: {item.produto.descricao} "
+                  f"- Qtd: {item.quantidade} - Valor: {item.produto.preco}" 
+                  f"- Total: {item.totalItem()}")
+        
 
     #encapsulamento - METODOS QUE INTERMEDIAM O ACESSO OU A ALTEÇÃO 
     def setNum(self, numero): #setando-alterando indireamente pois num é private

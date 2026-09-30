@@ -1,6 +1,6 @@
 import os
 from Pedido import Pedido
-from Cliente import Cliente
+from cliente import Cliente
 from Produto import Produto
 from ItemPedido import ItemPedido
 
