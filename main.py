@@ -1,33 +1,52 @@
+import os
 from Pedido import Pedido
-from cliente import Cliente
+from Cliente import Cliente
+from Produto import Produto
+from ItemPedido import ItemPedido
 
-#criar um objeto - representar um elemento - dar valores 
-#novoPedido = Pedido(1, "14/09/2026", "21:10", "Rafael",
-#                     ["X-Salada", "X-bacon"], "Pix")
+def menuCliente():
+    while True:
+        os.system("cls")
+        print("----  Clientes 👤 ----\n"+
+            "1 - 📄 Cadastrar\n"+
+            "2 - 🔎 Listar\n"+
+            "3 - 📝 Alterar\n"+
+            "4 - ❌ Excluir\n"+
+            "0 - ⬅️ Sair\n")
+        opcao = input("Digite a opção escolhida:")
 
-###### o que eu posso fazer com o Objeto? ####
-##acessar um atributo
-#print(novoPedido.cliente)
-#print(novoPedido.status)
+        if opcao=="0":
+            break
 
-##alterar os dados de um atributo
-#novoPedido.cliente="Rafael Martins"
-#print(novoPedido.cliente)
+def menuProduto():
+    while True:
+        os.system("cls")
+        print("----  Produtos 📦 ----\n"+
+            "1 - 📄 Cadastrar\n"+
+            "2 - 🔎 Listar\n"+
+            "3 - 📝 Alterar\n"+
+            "4 - ❌ Excluir\n"+
+            "0 - ⬅️ Sair\n")
+        opcao = input("Digite a opção escolhida:")
 
-##chamando os metodos
-#novoPedido.imprimir()
-#novoPedido.atualizar_pedido("Em preparação")
+        if opcao=="0":
+            break
 
-#acessar o id - private
-#novoPedido.__num=2 #ERRO PO SER PRIVADO
-#print(novoPedido.__num) #acessar - ERRO PO SER PRIVADO
-#print(novoPedido.getNum())
-#novoPedido.setNum(2)
-#print(novoPedido.getNum())
+##main
+if __name__ == "__main__":
+    while True:
+        os.system("cls")
+        print("---- Sistema Lanchonete 🥪 ----\n"
+            "1 - 👤 Clientes\n"+
+            "2 - 📦 Produtos\n"+
+            "3 - 🛒 Novo Pedido\n"+
+            "0 - ⬅️ Sair\n")
+        opcao = input("Digite a opção escolhida:")
 
-#novoPedido.setIten("X-Calabresa")
-#novoPedido.imprimir()#
-
-novoCliente = Cliente(endereco="rua vital brasil", nome="sla", cpf="38483", email= "jefjefnje@gmail.com",  tel="93489589" )
-novoCliente.imprimirficha() 
-
+        if opcao=="0":
+            break
+        elif opcao=="1":
+            menuCliente()
+        elif opcao=="2":
+            menuProduto()
+    print("\n bye!\n ( ﾟдﾟ)✌️   ")

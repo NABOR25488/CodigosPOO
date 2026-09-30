@@ -16,10 +16,12 @@ class Pedido:
     def atualizar_pedido(self, novoStatus):
         self.status=novoStatus
 
-    def imprimir(self):
+    def imprimirPedido(self):
         print(f"\n------------- Pedido nº {self.__num} --------------"
               f"\nData: {self.data} -  Horário: {self.hora} "
-              f"\nCliente: {self.cliente}"
+              f"\nCliente: {self.cliente.nome}"
+              f"\nEndereco: {self.cliente.endereco}"
+              f"\nTelefone: {self.cliente.getTelefone()}"
               f"\nItens do Pedido: {self.__itens}"
               f"\nStatus: {self.status} -  Pagamento: {self.pagamento}"
               f"\n----------------------------------------------"
