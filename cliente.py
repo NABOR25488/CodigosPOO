@@ -16,7 +16,7 @@ class Cliente:
     def setTelefone(self, tel):
         self.__Telefone=tel
 
-#metodos - acoes#
+    #metodos - acoes#
 
     def imprimeficha(self):
         print(f"\n------------------ CLIENTE--------------------"
